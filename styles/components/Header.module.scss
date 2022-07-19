@@ -1,0 +1,88 @@
+#header {
+    background: #D6A84C;
+    color: #04042D;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    font-family: gothamBook, Verdana, Geneva, Tahoma, sans-serif;
+    
+    .mobileHeaderLogo {
+        display: none;
+    }
+
+    .breadcrumbContainer {
+        display: flex;
+
+        .separator {
+            margin: 0 5px;            
+        }
+    }
+
+    .navlinks {
+        display: flex;
+        align-items: center;
+
+        .inputContainer {
+            margin: 0 15px;
+            background: #D9D9D9;
+            padding: 5px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            
+            input {
+                background: transparent;
+                border: 0;
+                height: 25px;
+                margin: 0 10px;
+                outline: none;
+                max-width: 200px;
+            }
+
+        }
+        
+        .profile {
+            cursor: pointer;
+        }
+    }
+}
+
+@font-face {
+    font-family: gotham;
+    src: url('../../public/fonts/gotham/Gotham.ttf');
+}
+
+@font-face {
+    font-family: gothamBook;
+    src: url('../../public/fonts/gotham/Gotham\ HTF\ Book.ttf');
+}
+
+@font-face {
+    font-family: gothamLight;
+    src: url('../../public/fonts/gotham/Gotham\ HTF\ Light.ttf');
+}
+
+@media (max-width: 1000px) {
+    #header {
+        
+        .navlinks {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    #header {
+        padding: 0 15px 0 0;
+        .mobileHeaderLogo {
+            display: flex;
+            padding: 5px;
+            background: #04042D;
+            border-radius: 0 5px 5px 0;
+        }
+        .navlinks {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,269 @@
+.extrato {    
+    padding: 15px;
+
+    .banner {        
+        font-size: 1.7rem;
+        font-family: gothamLight, Verdana, Geneva, Tahoma, sans-serif;
+        padding: 15px;
+    }
+
+    .balanceContainer {        
+        display: flex;
+        >div:nth-child(2) {
+            margin: 0 25px;
+        }
+    }
+
+    .historyContainer {
+        margin: 25px 0;
+
+        .history {
+            padding: 15px;
+
+            .header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                >div {
+                    &:nth-child(1)  {
+                        display: flex;
+                        align-items: center;
+                        >span {
+                            &:nth-child(1) {
+                                font-size: 1.3rem;
+                            }
+                            &:nth-child(2) {
+                                margin: 0 15px;
+                                color: #D6A84C;
+                            }
+                        }                    
+                    }
+                    &:nth-child(2) {
+                        >div {
+                            &:nth-child(1) {
+                                >span {
+                                    &:nth-child(1) {
+                                        color: #D6A84C;
+                                    }
+                                    &:nth-child(2) {
+                                        margin-left: 5px;
+                                        font-weight: bold;
+                                        color: #D6A84C;
+                                        text-decoration: underline;
+                                        cursor: pointer;
+                                        font-size: 0.8rem;
+                                    }
+                                }
+                            }
+                            &:nth-child(2) {
+                                display: flex;
+                                justify-content: center;
+                                padding: 5px 0;
+                                
+                                >span {
+                                    &:nth-child(1) {
+                                        color: #000000;
+                                        opacity: .5;
+                                    }
+                                    &:nth-child(2) {
+                                        color: #D6A84C;
+                                        margin-left: 10px;
+
+                                        img {
+                                            cursor: pointer;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .body {
+                margin-top: 50px;
+                display: flex;
+                flex-direction: column;
+
+                .calendar {
+                    display: flex;
+
+                    >div {
+                        &:nth-child(1) {
+                            padding: 5px;
+                            border-radius: 40px;
+                            border: 1px solid #ddd;
+                            display: flex;
+
+                            >div {
+                                margin: 0 10px;
+                                text-transform: uppercase;
+                                color: #262323;
+                                border-right: 1px solid #ddd;
+                                display: flex;
+                                align-items: center;
+
+                                &:last-child {
+                                    border: 0;
+                                }
+
+                                >span {
+                                    &:first-child {
+                                        font-size: 0.8rem;
+                                    }
+                                    &:last-child {                                        
+                                        margin-left: 15px;
+                                        margin-right: 5px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .extractContainer {
+        .extract {
+            padding: 15px;
+                  
+            .header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                >div {
+                    &:nth-child(1)  {
+                        display: flex;
+                        align-items: center;
+                        >span {
+                            &:nth-child(1) {
+                                font-size: 1.3rem;
+                            }
+                            &:nth-child(2) {
+                                margin: 0 15px;
+                                color: #D6A84C;
+                            }
+                        }                    
+                    }
+                    &:nth-child(2) {
+                        >div {
+                            &:nth-child(1) {
+                                >span {
+                                    &:nth-child(1) {
+                                        color: #D6A84C;
+                                    }
+                                    &:nth-child(2) {
+                                        margin-left: 5px;
+                                        font-weight: bold;
+                                        color: #D6A84C;
+                                        text-decoration: underline;
+                                        cursor: pointer;
+                                        font-size: 0.8rem;
+                                    }
+                                }
+                            }
+                            &:nth-child(2) {
+                                display: flex;
+                                justify-content: center;
+                                padding: 5px 0;
+                                
+                                >span {
+                                    &:nth-child(1) {
+                                        color: #000000;
+                                        opacity: .5;
+                                    }
+                                    &:nth-child(2) {
+                                        color: #D6A84C;
+                                        margin-left: 10px;
+
+                                        img {
+                                            cursor: pointer;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .body {
+                >div {
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .extrato {    
+        .balanceContainer {        
+            flex-direction: column;
+            
+            >div:nth-child(2) {
+                margin: 15px 0;
+            }
+        }
+
+        .historyContainer {                    
+            .header {
+                flex-direction: column;
+
+                .label {
+                    font-size: 1rem !important;
+                    text-align: center;
+                }
+
+                >div {                    
+                    &:nth-child(2) {
+                        text-align: center;
+                        margin-top: 25px;
+                    }
+
+                }
+            }
+            .body {
+                .calendar {
+                    .filter {
+                        display: none !important;
+                    }
+                }
+            }
+        }
+
+        .extractContainer {
+            .header {
+                flex-direction: column;
+
+                .label {
+                    font-size: 1rem !important;
+                    text-align: center;
+                }
+
+                >div {                    
+                    &:nth-child(2) {
+                        text-align: center;
+                        margin-top: 25px;
+                    }
+
+                }
+            }
+
+            .body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                table {
+                    tr {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}

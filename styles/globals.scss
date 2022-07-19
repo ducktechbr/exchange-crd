@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100% !important;
+    height: 100%;
+}
+
+html,
+      body,
+      body > div:first-child,
+      div#__next,
+      div#__next > div {
+        height: 100%;
+      }
+
+a {
+    text-decoration: none;
+}
+
+#mainContainer {        
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: auto 1fr;
+    grid-template-areas: 
+        "sidebar header"
+        "sidebar body";
+}
+
+#sidebarContainer {
+    grid-area: sidebar;
+    width: 300px;
+}
+
+#sidebarShortContainer {
+    display: none;
+    grid-area: sidebarShort;
+}
+
+#sidebarBottomContainer {
+    display: none;
+    grid-area: sidebarBottom;
+}
+
+#headerContainer {
+    grid-area: header;
+}
+
+#bodyContainer {
+    overflow-y: auto;
+    grid-area: body;
+    background: #D9D9D9;
+    font-family: gothamBook, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  border-radius: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@font-face {
+    font-family: gotham;
+    src: url('../public/fonts/gotham/Gotham.ttf');
+}
+
+@font-face {
+    font-family: gothamBook;
+    src: url('../public/fonts/gotham/Gotham HTF Book.ttf');
+}
+
+@font-face {
+    font-family: gothamLight;
+    src: url('../public/fonts/gotham/Gotham HTF Light.ttf');
+}
+
+@media (max-width: 1000px) {
+    #mainContainer {        
+        grid-template-areas: 
+            "sidebarShort header"
+            "sidebarShort body";
+
+            #sidebarContainer {
+                display: none;
+            }
+
+            #sidebarShortContainer {
+                display: flex;
+            }
+    }
+}
+
+@media (max-width: 500px) {
+    #mainContainer {        
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas: 
+            "header header"
+            "body body"
+            "sidebarBottom sidebarBottom";
+
+            #sidebarContainer {
+                display: none;
+            }
+
+            #sidebarShortContainer {
+                display: none;
+            }
+
+            #sidebarBottomContainer {
+                display: flex;
+            }
+    }
+}

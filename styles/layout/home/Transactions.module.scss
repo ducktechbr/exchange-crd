@@ -1,0 +1,135 @@
+.transactionContainer {
+    display: flex;
+    flex-direction: column;
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 5px;
+    
+        .label {
+            font-size: 1.05rem;
+            text-transform: uppercase;
+            color: #222;
+        }
+    }
+    
+    .table {
+        padding: 15px;
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+    
+            tbody {
+                tr {
+                    &:hover {
+                        background: #ebebeb;
+                    }
+                }
+            }
+        }
+    
+        tr {                 
+            margin: 0;
+            border-bottom: 1px solid #d4d4d4;
+            
+    
+            th, td {
+                text-align: center;
+                padding: 5px;
+            }
+    
+            th {
+                color: rgb(63, 61, 61);
+                border-right: 1px solid #d4d4d4;
+    
+                &:nth-last-child(-n+2), 
+                &:last-child {
+                    border-right: 0;
+                }
+            }
+    
+            td {
+                color: #797171;     
+            }                    
+        }
+
+        img {
+            cursor: pointer;
+        }
+    }
+    
+    .cta {
+        padding: 15px;
+        display: flex;
+        justify-content: flex-end;
+        
+        button {
+            padding: 15px;
+            border: 0;
+            outline: 0;
+            background: #04042D;
+            color: #FFFFFF;
+            border-radius: 15px;
+            cursor: pointer;
+            opacity: .9;
+    
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.transactionInfo {
+    cursor: pointer;
+}
+
+.successLabel, 
+.warningLabel, 
+.dangerLabel {
+    font-weight: bold;
+}
+
+.successLabel {
+    color: #1aa128;
+}
+
+.warningLabel {
+    color: #e9a71b;
+}
+
+.dangerLabel {
+    color: #f55656;
+}
+
+@media (max-width: 1500px) {
+    .table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;         
+    }
+
+    .cta {
+        button {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .transactionContainer {
+        .header {
+            img {
+                height: 30px;
+            }
+
+            .label {
+                font-size: .9rem;
+            }
+        }
+    
+    }
+}

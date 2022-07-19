@@ -1,0 +1,383 @@
+.stacksContainer {    
+    padding: 15px;
+
+
+    .balanceContainer {
+        padding: 15px 0;
+        display: flex;
+        >div:nth-child(2) {
+            margin: 0 25px;
+        }
+        margin-bottom: 15px;
+    }
+
+    .formContainer {
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 15px;
+            .label {
+                text-transform: uppercase;
+            }
+        }
+
+        .steps {
+            padding: 15px 0;
+            display: flex;
+    
+            .step1Container {
+                width: 100%;
+                display: flex;
+
+                .header {
+                    justify-content: flex-start;
+                    align-items: center;
+                    >div {
+                        width: auto;
+                    }
+                    >div:first-child {
+                        padding: 5px 15px;
+                    }
+                    >div:last-child {
+                        margin-left: 15px;
+                        color: #222;
+                    }
+                }
+
+                .description {
+                    padding: 15px;
+
+                    p {
+                        color: #222;
+                        margin-bottom: 15px;
+                        max-width: 350px;
+                    }
+
+                    p:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+
+                .form {
+                    padding: 15px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .left {
+                        width: 100%;
+
+                        span {
+                            color: #262323;
+                            text-transform: uppercase;
+                            opacity: .5;
+                        }
+
+                        .inputValue {
+                            padding: 5px 15px;
+                            border: 1px solid #ddd;
+                            border-radius: 10px;
+                            background: #fff;
+                            max-width: 200px;
+                            display: flex;
+                            align-items: center;
+
+                            >span {
+                                color: #888;
+                            }
+
+                            input {
+                                width: 100%;
+                                padding: 5px;
+                                border: 0;
+                                outline: none;
+                            }
+                        }
+                    }
+                    
+                    .right {
+                        width: 100%;
+
+                        .header {
+                            span {                                
+                                color: #262323;
+                                text-transform: uppercase;
+                                opacity: .5;
+                            }
+                        }
+
+                        .bonusContainer {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+
+                            .discountLabel {
+                                display: flex;
+                                flex-direction: column;
+
+                                div:first-child {
+                                    span:first-child {
+                                        text-decoration: line-through;
+                                    }
+                                    span:last-child {
+                                        margin-left: 5px;
+                                        font-size: 0.7rem;
+                                    }
+                                }
+
+                                div:last-child {                                    
+                                    span:last-child {
+                                        margin-left: 5px;
+                                        font-size: 0.7rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .info {
+                    padding: 15px;
+                    font-size: 0.9rem;
+                    color: #222;
+
+                    >div {
+                        display: flex;
+                        align-items: center;
+
+                        >span {
+                            margin-left: 5px;
+                            color: #777;
+                        }
+                    }
+
+                    >div:first-child {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+
+            .step2Container {
+                width: 100%;
+                display: flex;
+                
+                .header {
+                    justify-content: flex-start;
+                    align-items: center;
+                    >div {
+                        width: auto;
+                    }
+                    >div:first-child {
+                        padding: 5px 15px;
+                    }
+                    >div:last-child {
+                        margin-left: 15px;
+                        color: #222;
+                    }
+                }
+
+                .description {
+                    padding: 15px;
+
+                    p {
+                        color: #222;
+                        max-width: 350px;
+                    }
+                }
+
+                .cta {                    
+                    display: flex;
+                    justify-content: flex-end;
+                    
+                    button {
+                        text-transform: uppercase;
+                        padding: 15px;
+                        border-radius: 15px;
+                        border: 0;
+                        outline: none;
+                        color: #FFFFFF;
+                        background: #428C36;
+                        font-size: 1.2rem;
+                        font-family: gothamLight, Verdana, Geneva, Tahoma, sans-serif;
+                        cursor: pointer;
+                    }
+                }
+
+                .info {
+                    padding: 15px;
+                    font-size: 0.9rem;
+                    color: #222;
+
+                    >div {
+                        display: flex;
+                        align-items: center;
+
+                        >span {
+                            margin-left: 5px;
+                            color: #777;
+                        }
+                    }
+                }
+            }
+            
+            .step2Container {
+                width: 100%;
+                margin-left: 15px;
+            }
+        }
+    }
+
+    .qrCode {
+        background: rgba(4, 4, 45, .9);
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        .container {
+            background: transparent;
+            display: flex;
+            flex-direction: column;
+            border-radius: 14px;
+        }
+
+        .header {
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            background: #fff;
+            padding-top: 15px;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 5px 15px;
+            background: #fff;
+            max-width: 350px;
+
+            >div {
+                &:first-child {
+                    text-align: center;
+                    .logo {
+                        padding: 5px 5px 20px 5px;
+                    }
+
+                    .headerLabel {
+                        font-weight: bold;
+                    }
+
+                }
+                &:nth-child(3) {
+                    font-size: .8rem;
+                    text-align: center;
+                    font-weight: bold;
+                    margin: 5px 0;
+                }
+                &:nth-child(4) {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 5px;                    
+                    margin: 5px;
+                    font-weight: bold;
+                }
+                &:nth-child(5) {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 5px;
+                    font-weight: bold;               
+                }
+            }
+        }
+
+        .footer {
+            display: flex;
+            justify-content: center;
+            padding: 5px 15px 15px 15px;
+            background: #fff;
+            border-radius: 0 0 5px 5px;
+
+            >div {
+                &:first-child {
+                    background: #D6A84C;
+                    width: 100%;
+                    padding: 15px;
+                    border-radius: 5px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                    
+                    label {
+                        text-transform: uppercase;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        
+        img {
+            border-radius: 14px;
+            max-width: 200px;
+            max-height: 200px;
+            cursor: pointer;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .stacksContainer {
+        .balanceContainer {        
+            flex-direction: column;
+            
+            >div:nth-child(2) {
+                margin: 15px 0;
+            }
+        }
+    }
+    .formContainer {
+        .steps {
+            flex-direction: column;
+
+            .step1Container {
+                .form {
+                    flex-direction: column;
+
+                    .left {
+                        >div {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            margin: 5px 0 25px 0;
+                        }
+                    }
+
+                    .right {
+                       .header {
+                        display: flex;
+                        justify-content: center;
+                       }
+                    }
+                }
+            }
+            .step2Container {
+                margin: 15px 0 0 0 !important;
+            }           
+        }
+        .cta {
+            justify-content: center !important;
+        }
+    }
+}

@@ -1,0 +1,92 @@
+#loginContainer {
+    background: #00203f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    width: 100%;
+    min-height: 100vh;
+    
+    .loginFormContainer {
+        border-radius: 10px;
+        padding: 25px 50px;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        width: 375px;
+        
+        .headerLogo {
+            display: flex;
+            justify-content: center;
+        }
+
+        .headerText {
+            font-size: 1.4em;
+            margin: 15px 0;
+        }
+
+        .inputContainer {
+            display: flex;
+            flex-direction: column;
+
+            input {
+                margin: 7.5px 0;
+                padding: 10px;
+                outline: none;
+                border: 1px solid #aaa;
+                border-radius: 4px;
+            }
+        }
+
+        .underInputContainer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 15px 0;
+
+            div {
+                display: flex;
+                align-items: center;
+
+                input[type="checkbox"] {
+                    margin-right: 5px;
+                }
+    
+                label {
+                    font-size: 0.8rem;
+                }
+            }
+
+
+            a {
+                font-size: 0.8rem;
+            }
+        }
+
+        .ctaContainer {
+
+            button {
+                padding: 10px 15px;
+                margin: 15px 0;
+                width: 100%;
+                background: #00203f;
+                border: 0;
+                border-radius: 4px;
+                color: #fff;
+
+                &:hover {
+                    cursor: pointer;
+                    opacity: .9;
+                }
+            }
+
+        }
+
+        .createAccountContainer {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 25px;
+            font-size: 0.9rem;
+        }
+    }
+}

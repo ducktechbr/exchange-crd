@@ -1,0 +1,90 @@
+.buyStacks {       
+    color: #222;
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
+
+        .headerLabel {
+            text-transform: uppercase;
+        }
+    }
+
+    .label {
+        padding: 5px 0;
+    }
+
+    .quantityContainer {
+        display: flex;
+        align-items: center;
+        padding: 15px 0; 
+
+        .inputQuantity {
+            background: #FFFFFF;
+            border: 1px solid #ddd;
+            padding: 5px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+
+            span {
+                padding: 0 5px;
+                font-size: 0.9rem;
+                color: rgb(150, 148, 148);
+            }
+
+            input {
+                outline: none;
+                border: 0;
+                padding: 5px;
+                font-size: 1.3rem;
+                width: 100%;
+                max-width: 100px;
+            }
+        }
+
+        .outputQuantity {
+            padding: 0 5px;
+        }
+    }
+
+    .info {
+        font-size: .8rem;
+    }
+
+    .cta {
+        padding: 15px 0;
+        
+        button {
+            width: 100%;
+            outline: none;
+            border: 0;
+            padding: 15px 0;
+            border-radius: 15px;
+            font-size: 1.2rem;
+            color: #FFFFFF;
+            background: #428C36;
+            text-transform: uppercase;
+            font-family: gothamLight, Verdana, Geneva, Tahoma, sans-serif;
+            cursor: pointer;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .buyStacks {
+        .header {
+            img {
+                height: 35px;
+            }
+
+            .label {
+                font-size: 1.9rem;
+            }
+        }
+    
+    }
+}
